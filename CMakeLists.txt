@@ -13,6 +13,8 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 # Archivos fuente (se iran agregando conforme avancemos)
 set(SOURCES
     src/main.cpp
+    src/TramaLoad.cpp
+    src/TramaMap.cpp
     # Aqui se agregaran mas archivos .cpp
 )
 
