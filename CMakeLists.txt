@@ -15,6 +15,7 @@ set(SOURCES
     src/main.cpp
     src/TramaLoad.cpp
     src/TramaMap.cpp
+    src/RotorDeMapeo.cpp
     # Aqui se agregaran mas archivos .cpp
 )
 
