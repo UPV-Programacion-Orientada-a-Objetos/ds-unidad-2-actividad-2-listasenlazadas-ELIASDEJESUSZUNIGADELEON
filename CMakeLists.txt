@@ -17,7 +17,7 @@ set(SOURCES
     src/TramaMap.cpp
     src/RotorDeMapeo.cpp
     src/ListaDeCarga.cpp
-    # Aqui se agregaran mas archivos .cpp
+    src/SerialPort.cpp
 )
 
 # Crear el ejecutable
