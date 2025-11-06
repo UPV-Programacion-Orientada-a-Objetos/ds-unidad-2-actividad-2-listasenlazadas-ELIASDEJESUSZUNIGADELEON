@@ -1,2 +1,41 @@
+# VS Code
 .vscode
 .vscode/*
+
+# Archivos de compilación CMake
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+*.cmake
+Makefile
+*.cbp
+
+# Ejecutables
+*.exe
+*.out
+DecodificadorPRT7
+DecodificadorPRT7.exe
+
+# Archivos objeto y temporales
+*.o
+*.obj
+*.a
+*.lib
+
+# PlatformIO (Arduino)
+arduino/.pio/
+arduino/.vscode/
+arduino/lib/
+arduino/test/
+
+# Documentación Doxygen
+docs/html/
+docs/latex/
+docs/xml/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.swp
+*~
