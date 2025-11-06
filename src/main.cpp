@@ -11,7 +11,7 @@ int main() {
     std::cout << "Iniciando Decodificador PRT-7..." << std::endl;
     std::cout << "Conectando a puerto COM..." << std::endl;
     
-    // Aqui ira la lóogica completa del decodificador
+    // Aqui ira la logica completa del decodificador
     // Por ahora solo mostramos el mensaje de prueba
     std::cout << std::endl;
     std::cout << "Sistema inicializado correctamente." << std::endl;
