@@ -29,10 +29,6 @@ arduino/.vscode/
 arduino/lib/
 arduino/test/
 
-# Documentación Doxygen
-docs/html/
-docs/latex/
-docs/xml/
 
 # Archivos del sistema
 .DS_Store
