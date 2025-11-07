@@ -1,11 +1,8 @@
 /**
  * @file SerialPort.h
- * @brief Clase para comunicacion serial en Windows
- * @author Decodificador PRT-7 Team
+ * @brief Comunicacion serial con Arduino/ESP32 usando Win32 API
+ * @author Elias de Jesus Zuniga de Leon
  * @date 2025-11-06
- * 
- * Esta clase maneja la comunicacion con el puerto COM usando Win32 API.
- * Permite abrir, configurar, leer y cerrar puertos seriales en Windows.
  */
 
 #ifndef SERIAL_PORT_H
@@ -17,10 +14,7 @@
 
 /**
  * @class SerialPort
- * @brief Maneja la comunicacion serial con el Arduino/ESP32
- * 
- * Usa la API de Windows (HANDLE, DCB, etc.) para comunicarse
- * con dispositivos seriales conectados via USB.
+ * @brief Maneja la lectura del puerto COM (115200 baudios)
  */
 class SerialPort {
 private:
@@ -52,14 +46,10 @@ public:
     bool estaConectado() const;
     
     /**
-     * @brief Lee una linea de texto del puerto serial
-     * 
-     * Lee caracteres hasta encontrar '\n' o llenar el buffer.
-     * Elimina caracteres de control (\r, \n).
-     * 
-     * @param buffer Buffer donde se almacenara la linea leida
-     * @param bufferSize Tamanio maximo del buffer
-     * @return Numero de caracteres leidos (0 si no hay datos)
+     * @brief Lee una linea del puerto serial
+     * @param buffer Buffer para almacenar la linea
+     * @param bufferSize Tamanio del buffer
+     * @return Numero de caracteres leidos
      */
     int leerLinea(char* buffer, int bufferSize);
     

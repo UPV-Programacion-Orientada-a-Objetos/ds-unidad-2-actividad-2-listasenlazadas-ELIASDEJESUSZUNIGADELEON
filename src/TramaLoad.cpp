@@ -1,7 +1,7 @@
 /**
  * @file TramaLoad.cpp
  * @brief Implementacion de la clase TramaLoad
- * @author Decodificador PRT-7 Team
+ * @author Elias de Jesus Zuniga de Leon
  * @date 2025-11-06
  */
 

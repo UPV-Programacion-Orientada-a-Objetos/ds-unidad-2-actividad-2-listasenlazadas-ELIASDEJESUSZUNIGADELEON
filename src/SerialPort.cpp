@@ -1,7 +1,7 @@
 /**
  * @file SerialPort.cpp
  * @brief Implementacion de comunicacion serial para Windows
- * @author Decodificador PRT-7 Team
+ * @author Elias de Jesus Zuniga de Leon
  * @date 2025-11-06
  */
 

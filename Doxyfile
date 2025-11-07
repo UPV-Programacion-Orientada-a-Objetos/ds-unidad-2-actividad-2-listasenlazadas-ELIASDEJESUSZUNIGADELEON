@@ -1,0 +1,51 @@
+# Doxyfile - Configuracion para generar documentacion del proyecto
+
+# Informacion del proyecto
+PROJECT_NAME           = "Decodificador PRT-7"
+PROJECT_NUMBER         = "v1.0"
+PROJECT_BRIEF          = "Sistema de decodificacion de protocolo industrial"
+
+# Directorios
+INPUT                  = include src README_PROYECTO.md
+OUTPUT_DIRECTORY       = docs
+RECURSIVE              = YES
+EXCLUDE                = build arduino/src
+
+# Generacion de documentacion
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HTML_OUTPUT            = html
+
+# Idioma y codificacion
+OUTPUT_LANGUAGE        = Spanish
+DOXYFILE_ENCODING      = UTF-8
+
+# Extraccion de documentacion
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+
+# Graficos y diagramas
+HAVE_DOT               = NO
+CLASS_DIAGRAMS         = YES
+
+# Formato de salida
+HTML_COLORSTYLE_HUE    = 200
+HTML_COLORSTYLE_SAT    = 100
+HTML_COLORSTYLE_GAMMA  = 80
+
+# Archivos a procesar
+FILE_PATTERNS          = *.cpp *.h *.md
+EXTENSION_MAPPING      = h=C++
+
+# Optimizacion
+OPTIMIZE_OUTPUT_FOR_C  = NO
+OPTIMIZE_OUTPUT_JAVA   = NO
+
+# Advertencias
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+
+# Pagina principal
+USE_MDFILE_AS_MAINPAGE = README_PROYECTO.md

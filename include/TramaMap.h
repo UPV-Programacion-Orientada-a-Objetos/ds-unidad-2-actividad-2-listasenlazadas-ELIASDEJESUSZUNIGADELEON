@@ -1,12 +1,8 @@
 /**
  * @file TramaMap.h
- * @brief Clase para tramas de tipo MAP del protocolo PRT-7
- * @author Decodificador PRT-7 Team
+ * @brief Clase para tramas MAP (M,N)
+ * @author Elias de Jesus Zuniga de Leon
  * @date 2025-11-06
- * 
- * Las tramas MAP contienen una instruccion de rotacion (numero entero)
- * que modifica el estado del rotor de mapeo. Esto cambia como se
- * decodifican las tramas LOAD subsecuentes.
  */
 
 #ifndef TRAMA_MAP_H
@@ -16,10 +12,7 @@
 
 /**
  * @class TramaMap
- * @brief Representa una trama de mapeo (M,N)
- * 
- * Esta clase almacena un valor de rotacion (positivo o negativo) que
- * se aplica al rotor de mapeo cuando se ejecuta el metodo procesar().
+ * @brief Trama de mapeo - rota el rotor N posiciones
  */
 class TramaMap : public TramaBase {
 private:
@@ -38,13 +31,9 @@ public:
     ~TramaMap();
     
     /**
-     * @brief Procesa la trama MAP
-     * 
-     * Aplica la rotacion al rotor de mapeo, cambiando el estado
-     * del sistema de decodificacion.
-     * 
-     * @param carga Puntero a la lista de carga (no se usa en MAP)
-     * @param rotor Puntero al rotor de mapeo que sera rotado
+     * @brief Procesa la trama - rota el rotor
+     * @param carga No se usa en MAP
+     * @param rotor Rotor a rotar
      */
     void procesar(ListaDeCarga* carga, RotorDeMapeo* rotor) override;
 };

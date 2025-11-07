@@ -1,12 +1,8 @@
 /**
  * @file RotorDeMapeo.h
- * @brief Lista Circular Doblemente Enlazada para mapeo de caracteres
- * @author Decodificador PRT-7 Team
+ * @brief Lista circular para el rotor de mapeo de caracteres
+ * @author Elias de Jesus Zuniga de Leon
  * @date 2025-11-06
- * 
- * El RotorDeMapeo es una lista circular que simula un "disco de cifrado"
- * similar a las maquinas Enigma. Contiene el alfabeto A-Z y un espacio,
- * y puede rotar para cambiar el mapeo de caracteres.
  */
 
 #ifndef ROTOR_DE_MAPEO_H
@@ -30,11 +26,7 @@ struct NodoRotor {
 
 /**
  * @class RotorDeMapeo
- * @brief Lista circular doblemente enlazada que actua como disco de cifrado
- * 
- * Esta estructura contiene los caracteres A-Z y espacio en orden.
- * El puntero 'cabeza' indica la posicion "cero" actual del rotor.
- * Al rotar, la cabeza se mueve, cambiando el mapeo de caracteres.
+ * @brief Lista circular con 27 nodos (A-Z + espacio) para mapear caracteres
  */
 class RotorDeMapeo {
 private:
@@ -57,10 +49,7 @@ private:
     
 public:
     /**
-     * @brief Constructor - Inicializa el rotor con A-Z y espacio
-     * 
-     * Crea una lista circular con 27 nodos (26 letras + 1 espacio).
-     * La cabeza apunta inicialmente a 'A'.
+     * @brief Constructor - Crea lista circular con A-Z y espacio
      */
     RotorDeMapeo();
     
@@ -71,28 +60,14 @@ public:
     
     /**
      * @brief Rota el rotor N posiciones
-     * 
-     * Mueve el puntero 'cabeza' N posiciones en la lista circular.
-     * Positivo = rotar a la derecha (siguiente)
-     * Negativo = rotar a la izquierda (previo)
-     * 
-     * @param n Numero de posiciones a rotar
+     * @param n Numero de posiciones (positivo = derecha, negativo = izquierda)
      */
     void rotar(int n);
     
     /**
      * @brief Obtiene el caracter mapeado segun la rotacion actual
-     * 
-     * Esta es la funcion de mapeo del rotor. Dado un caracter de entrada,
-     * calcula que caracter le corresponde basado en la rotacion actual.
-     * 
-     * Logica:
-     * 1. Buscar el caracter 'in' en el rotor
-     * 2. Calcular su distancia relativa a la cabeza
-     * 3. Devolver el caracter que esta en esa misma distancia desde 'A'
-     * 
      * @param in Caracter a mapear
-     * @return Caracter mapeado segun la rotacion actual
+     * @return Caracter mapeado
      */
     char getMapeo(char in);
     

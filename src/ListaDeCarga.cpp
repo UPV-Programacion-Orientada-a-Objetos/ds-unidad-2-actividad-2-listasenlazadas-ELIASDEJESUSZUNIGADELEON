@@ -1,7 +1,7 @@
 /**
  * @file ListaDeCarga.cpp
  * @brief Implementacion de la ListaDeCarga
- * @author Decodificador PRT-7 Team
+ * @author Elias de Jesus Zuniga de Leon
  * @date 2025-11-06
  */
 

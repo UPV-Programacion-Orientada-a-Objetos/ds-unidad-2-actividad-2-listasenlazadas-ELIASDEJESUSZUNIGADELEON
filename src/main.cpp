@@ -1,12 +1,8 @@
 /**
  * @file main.cpp
- * @brief Punto de entrada principal del Decodificador PRT-7
- * @author Decodificador PRT-7 Team
+ * @brief Programa principal del Decodificador PRT-7
+ * @author Elias de Jesus Zuniga de Leon
  * @date 2025-11-06
- * 
- * Este programa implementa un decodificador para el protocolo industrial PRT-7,
- * que lee tramas desde un puerto serial (Arduino/ESP32) y ensambla mensajes ocultos
- * utilizando listas doblemente enlazadas y listas circulares.
  */
 
 #include <iostream>
@@ -22,13 +18,9 @@
 const char* PUERTO_COM = "COM9";
 
 /**
- * @brief Funcion para parsear una trama y crear el objeto correspondiente
- * 
- * Parsea una linea del tipo "L,X" o "M,N" sin usar STL.
- * Utiliza manipulacion manual de char* para extraer los datos.
- * 
- * @param linea Linea leida del puerto serial (ej: "L,H" o "M,2")
- * @return Puntero a TramaBase* (puede ser TramaLoad o TramaMap), o nullptr si es invalida
+ * @brief Parsea una linea y crea el objeto trama correspondiente
+ * @param linea Linea del puerto (ej: "L,H" o "M,2")
+ * @return Puntero a TramaBase (TramaLoad o TramaMap)
  */
 TramaBase* parsearTrama(char* linea) {
     // Verificar que la linea no este vacia

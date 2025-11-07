@@ -1,11 +1,8 @@
 /**
  * @file ListaDeCarga.h
- * @brief Lista Doblemente Enlazada para almacenar el mensaje decodificado
- * @author Decodificador PRT-7 Team
+ * @brief Lista doblemente enlazada para el mensaje decodificado
+ * @author Elias de Jesus Zuniga de Leon
  * @date 2025-11-06
- * 
- * La ListaDeCarga almacena los caracteres decodificados en orden de llegada.
- * Esta es una lista doblemente enlazada LINEAL (no circular), con inicio y fin.
  */
 
 #ifndef LISTA_DE_CARGA_H
@@ -29,10 +26,7 @@ struct NodoCarga {
 
 /**
  * @class ListaDeCarga
- * @brief Lista doblemente enlazada para el mensaje decodificado
- * 
- * Esta estructura almacena los caracteres decodificados en el orden
- * en que se procesan las tramas LOAD. Es una lista LINEAL (no circular).
+ * @brief Lista lineal doblemente enlazada que almacena el mensaje
  */
 class ListaDeCarga {
 private:
@@ -58,19 +52,12 @@ public:
     
     /**
      * @brief Inserta un caracter al final de la lista
-     * 
-     * Este metodo es llamado por TramaLoad::procesar() para agregar
-     * cada caracter decodificado al mensaje.
-     * 
      * @param dato Caracter a insertar
      */
     void insertarAlFinal(char dato);
     
     /**
      * @brief Imprime el mensaje completo almacenado
-     * 
-     * Recorre la lista e imprime todos los caracteres en orden,
-     * mostrando el mensaje oculto ensamblado.
      */
     void imprimirMensaje();
     
